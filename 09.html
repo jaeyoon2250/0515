@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function callbackTest(callback){ //매개변수와 for문 안의 함수의 이름이 같아야한다
+            for(i = 0; i < 10; i++){
+                callback();
+            }
+        }
+
+        var callback = function(){
+            alert("함수 호출");
+        }
+
+        callbackTest(callback); //매개변수명이 익명함수의 변수명과 같아야한다
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
